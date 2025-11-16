@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    overflow-x: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  /* Scroll offset for anchor links */
+  section[id] {
+    scroll-margin-top: 100px;
+  }
+  
+  /* Better focus styles */
+  *:focus-visible {
+    outline: 2px solid rgba(255, 26, 26, 0.5);
+    outline-offset: 2px;
+  }
+  
+  /* Smooth transitions - Applied selectively, not globally for performance */
+  button, a, input, select, textarea {
+    transition-property: color, background-color, border-color, opacity, box-shadow, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  
+  /* Select dropdown styling */
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+  /* Select dropdown styling - Dark theme with red accents */
+  select {
+    background-color: #1a0f0f !important;
+    color: #ffffff !important;
+  }
+  
+  /* Select option styling - Dark theme */
+  select option {
+    background-color: #1a0f0f !important;
+    background: #1a0f0f !important;
+    color: #ffffff !important;
+    padding: 0.75rem 1rem;
+  }
+  
+  /* Placeholder option (empty value) */
+  select option[value=""] {
+    background-color: #1a0f0f !important;
+    background: #1a0f0f !important;
+    color: rgba(212, 180, 180, 0.4) !important;
+  }
+  
+  /* Selected/Checked option - Red theme instead of blue */
+  select option:checked,
+  select option[selected],
+  select option:focus {
+    background-color: #2a1515 !important;
+    background: #2a1515 !important;
+    color: #ff1a1a !important;
+    font-weight: 500;
+  }
+  
+  /* Hover state for options - Red accent */
+  select option:hover {
+    background-color: #2a1515 !important;
+    background: #2a1515 !important;
+    color: #ff1a1a !important;
+  }
+  
+  /* Select when open - ensure consistent styling */
+  select:focus {
+    outline: none;
+  }
+  
+  /* Override browser default blue highlight completely */
+  select:focus option:checked,
+  select:focus option[selected] {
+    background-color: #2a1515 !important;
+    background: #2a1515 !important;
+    color: #ff1a1a !important;
+  }
+  
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  select option:checked {
+    background: #2a1515 !important;
+    background-color: #2a1515 !important;
+    color: #ff1a1a !important;
+  }
+  
+  /* Firefox */
+  select option:-moz-selected {
+    background-color: #2a1515 !important;
+    color: #ff1a1a !important;
+  }
+}
+
