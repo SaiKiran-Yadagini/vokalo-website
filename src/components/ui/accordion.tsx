@@ -27,7 +27,7 @@ export interface AccordionProps {
 }
 
 export function Accordion({
-  type: _type = 'single', // kept for API compatibility, currently only 'single' is used
+  type = 'single', // kept for API compatibility, currently only 'single' is used
   collapsible,
   className,
   children,

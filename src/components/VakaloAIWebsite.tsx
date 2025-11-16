@@ -10,33 +10,35 @@ import { Input } from '@/components/ui/input';
 
 import { 
 
+  Play, 
+
   CheckCircle, 
 
   Star, 
 
-  Mail, 
+  Mail,
 
-  Sparkles, 
+  Sparkles,
 
-  Zap, 
+  Zap,
 
-  Shield, 
+  Shield,
 
-  Clock, 
+  Clock,
 
-  ArrowRight, 
+  ArrowRight,
 
-  ArrowUp, 
+  ArrowUp,
 
-  ChevronDown, 
+  ChevronDown,
 
-  ChevronUp, 
+  ChevronUp,
 
-  Mic, 
+  Mic,
 
-  Brain, 
+  Brain,
 
-  Gauge 
+  Gauge
 
 } from 'lucide-react';
 
@@ -160,8 +162,8 @@ function VakaloAIWebsite() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const playerRef = useRef<any>(null);
-  const timeCheckIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const messageTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const timeCheckIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const messageTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     let ticking = false;
@@ -377,7 +379,7 @@ function VakaloAIWebsite() {
       formDataToSubmit.append('entry.1898441062', formData.subscriberCount);
 
       // Submit to Google Forms using fetch (no redirect)
-      await fetch(
+      const response = await fetch(
         'https://docs.google.com/forms/d/e/1FAIpQLSeI6QZRilxn2GwKF-ajOHDM5aUqlHi_0foYW23UBPMjTunYBw/formResponse',
         {
           method: 'POST',
