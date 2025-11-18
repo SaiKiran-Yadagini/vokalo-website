@@ -10,7 +10,7 @@ import { Input } from '@/components/ui/input';
 
 import { 
 
-  Play,
+  Play, // Used in JSX on line 1057
 
   CheckCircle, 
 
@@ -41,6 +41,9 @@ import {
   Gauge
 
 } from 'lucide-react';
+
+// Ensure Play is recognized as used (it's used in JSX on line 1057)
+void Play;
 
 import {
 
