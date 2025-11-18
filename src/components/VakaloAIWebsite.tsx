@@ -1519,43 +1519,50 @@ function VakaloAIWebsite() {
 
       {/* Footer */}
 
-      <footer className="py-12 sm:py-16 px-4 sm:px-6 bg-[#0a0404] border-t border-[#8b0000]/20">
+      <footer className="relative py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-[#0a0404] via-[#0f0606] to-[#0a0404] border-t border-[#8b0000]/30 overflow-hidden">
 
-        <div className="container mx-auto max-w-7xl">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#ff1a1a] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#cc0000] rounded-full blur-3xl"></div>
+        </div>
 
-          <div className="text-center space-y-4 sm:space-y-6">
+        <div className="container mx-auto max-w-7xl relative z-10">
 
-            <div className="flex items-center justify-center gap-3 mb-6 sm:mb-8">
+          <div className="flex flex-col items-center space-y-8 sm:space-y-10">
 
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#ff1a1a] via-[#cc0000] to-[#8b0000] rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg shadow-[#8b0000]/30 relative overflow-visible">
-
-                <svg className="w-5 h-5 sm:w-7 sm:h-7 text-white relative z-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Main V letter */}
+            {/* Logo and Brand */}
+            <div className="flex flex-col items-center gap-4">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[#ff1a1a] via-[#cc0000] to-[#8b0000] rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-2xl shadow-[#8b0000]/40 relative overflow-visible transition-transform hover:scale-105 duration-300">
+                <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white relative z-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2 2L12 20L22 2H17L12 12L7 2H2Z" fill="currentColor" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  {/* Sparkle effects */}
-                  <circle cx="6" cy="4" r="0.8" fill="white" opacity="0.9" className="animate-ping" style={{animationDelay: '0s', animationDuration: '2s'}}/>
-                  <circle cx="18" cy="4" r="0.8" fill="white" opacity="0.9" className="animate-ping" style={{animationDelay: '0.7s', animationDuration: '2s'}}/>
-                  <circle cx="12" cy="18" r="0.6" fill="white" opacity="0.8" className="animate-ping" style={{animationDelay: '1.4s', animationDuration: '2s'}}/>
                 </svg>
-
               </div>
-
-              <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-white to-[#e8d4d4] bg-clip-text text-transparent">Vakalo AI</h2>
-
+              <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-white via-[#f5e5e5] to-[#e8d4d4] bg-clip-text text-transparent tracking-tight">
+                Vakalo AI
+              </h2>
             </div>
 
-            <p className="text-[#d4b4b4] text-sm sm:text-base md:text-lg">© 2025 Vakalo AI. All rights reserved.</p>
-
-            <div className="flex items-center justify-center gap-2 sm:gap-3 text-[#d4b4b4] flex-wrap px-4">
-
-              <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#ff1a1a] flex-shrink-0" />
-
-              <a href="mailto:saikiran.yadagini@gmail.com" className="hover:text-[#ff1a1a] transition-colors text-sm sm:text-base md:text-lg break-all">
-
-                saikiran.yadagini@gmail.com
-
+            {/* Contact Email */}
+            <div className="flex flex-col items-center gap-3">
+              <a 
+                href="mailto:contact@vakalo.advoot.com" 
+                className="group flex items-center gap-3 px-6 py-3 bg-[#1a0f0f]/50 backdrop-blur-sm border border-[#8b0000]/30 rounded-xl hover:border-[#ff1a1a]/50 hover:bg-[#1a0f0f]/70 transition-all duration-300 hover:scale-105"
+              >
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#ff1a1a]/20 to-[#cc0000]/20 flex items-center justify-center group-hover:from-[#ff1a1a]/30 group-hover:to-[#cc0000]/30 transition-all duration-300">
+                  <Mail className="w-5 h-5 text-[#ff1a1a] group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <span className="text-[#d4b4b4] group-hover:text-white text-base sm:text-lg font-medium transition-colors duration-300">
+                  contact@vakalo.advoot.com
+                </span>
               </a>
+            </div>
 
+            {/* Copyright */}
+            <div className="pt-4 border-t border-[#8b0000]/20 w-full max-w-md">
+              <p className="text-[#8b6b6b] text-sm sm:text-base text-center">
+                © 2025 Vakalo AI. All rights reserved.
+              </p>
             </div>
 
           </div>
