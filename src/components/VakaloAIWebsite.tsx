@@ -10,8 +10,6 @@ import { Input } from '@/components/ui/input';
 
 import { 
 
-  Play, 
-
   CheckCircle, 
 
   Star, 
@@ -162,8 +160,8 @@ function VakaloAIWebsite() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const playerRef = useRef<any>(null);
-  const timeCheckIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  const messageTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const timeCheckIntervalRef = useRef<number | null>(null);
+  const messageTimeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
     let ticking = false;
@@ -379,7 +377,7 @@ function VakaloAIWebsite() {
       formDataToSubmit.append('entry.1898441062', formData.subscriberCount);
 
       // Submit to Google Forms using fetch (no redirect)
-      const response = await fetch(
+      await fetch(
         'https://docs.google.com/forms/d/e/1FAIpQLSeI6QZRilxn2GwKF-ajOHDM5aUqlHi_0foYW23UBPMjTunYBw/formResponse',
         {
           method: 'POST',

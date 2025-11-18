@@ -14,8 +14,6 @@ export default defineConfig({
     },
   },
   build: {
-    // Clear output directory on each build to avoid stale files
-    emptyOutDir: true,
     // Optimize build output
     rollupOptions: {
       output: {
