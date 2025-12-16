@@ -145,7 +145,7 @@ Mockup.displayName = 'Mockup';
 
 // Main Component
 
-function VakaloAIWebsite() {
+function VoxzenAIWebsite() {
 
   const [formData, setFormData] = useState({
 
@@ -287,7 +287,6 @@ function VakaloAIWebsite() {
     return () => {
       if (timeCheckIntervalRef.current) {
         clearInterval(timeCheckIntervalRef.current);
-        timeCheckIntervalRef.current = null;
       }
       if (playerRef.current) {
         try {
@@ -481,7 +480,7 @@ function VakaloAIWebsite() {
 
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-white to-[#e8d4d4] bg-clip-text text-transparent">Vakalo AI</h2>
+            <h2 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-white to-[#e8d4d4] bg-clip-text text-transparent">Voxzen AI</h2>
 
           </a>
 
@@ -683,7 +682,7 @@ function VakaloAIWebsite() {
 
                   <div className="absolute -top-8 sm:-top-10 left-2 sm:left-4 z-20 bg-gradient-to-r from-[#ff1a1a] to-[#cc0000] px-3 sm:px-5 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-2xl shadow-[#8b0000]/50">
 
-                    <span className="text-xs sm:text-sm font-semibold text-white">Vakalo AI: Realistic & Conversational - Telugu Dub</span>
+                    <span className="text-xs sm:text-sm font-semibold text-white">Voxzen AI: Realistic & Conversational - Telugu Dub</span>
 
                   </div>
 
@@ -697,7 +696,7 @@ function VakaloAIWebsite() {
 
                         src="https://www.youtube.com/embed/_jCd3Vq3bFI?rel=0&modestbranding=1"
 
-                        title="Vakalo AI: Realistic & Conversational - Telugu Dub"
+                        title="Voxzen AI: Realistic & Conversational - Telugu Dub"
 
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 
@@ -996,109 +995,6 @@ function VakaloAIWebsite() {
         </div>
 
       </section>
-
-      {/* Showroom Section - COMMENTED OUT - Can be restored when needed */}
-      {/* 
-      <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 bg-gradient-to-b from-[#0a0404] to-[#1a0f0f] relative">
-
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8b000008_1px,transparent_1px),linear-gradient(to_bottom,#8b000008_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-
-        <div className="container mx-auto max-w-7xl relative z-10">
-
-          <motion.h2
-
-            initial={{ opacity: 0, y: 20 }}
-
-            whileInView={{ opacity: 1, y: 0 }}
-
-            viewport={{ once: true }}
-
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center mb-12 sm:mb-16 md:mb-20 bg-gradient-to-b from-white to-[#d4b4b4] bg-clip-text text-transparent leading-tight px-4"
-
-          >
-
-            Hear the Vakalo AI Difference
-
-          </motion.h2>
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-
-            {[
-
-              { title: 'Tech Creator in Telugu', subtitle: 'Tech Burner Demo' },
-
-              { title: 'Educator in Tamil', subtitle: 'Ankur Warikoo Demo' },
-
-              { title: 'Finance Expert in Hindi', subtitle: 'Rachana Ranade Demo' }
-
-            ].map((demo, i) => (
-
-              <motion.div
-
-                key={i}
-
-                initial={{ opacity: 0, y: 30 }}
-
-                whileInView={{ opacity: 1, y: 0 }}
-
-                viewport={{ once: true }}
-
-                transition={{ delay: i * 0.1 }}
-
-                className="group bg-gradient-to-br from-[#2a1515]/40 to-[#1a0f0f]/40 backdrop-blur-sm border border-[#8b0000]/20 rounded-2xl sm:rounded-3xl overflow-hidden hover:border-[#ff1a1a]/50 transition-all duration-300 hover:shadow-[0_0_50px_rgba(255,26,26,0.15)]"
-
-              >
-
-                <div className="aspect-video bg-gradient-to-br from-[#2a1515] to-[#1a0f0f] flex items-center justify-center relative overflow-hidden">
-
-                  <div className="absolute inset-0 bg-[#ff1a1a]/5 group-hover:bg-[#ff1a1a]/10 transition-colors"></div>
-
-                  <div className="relative">
-
-                    <div className="absolute inset-0 bg-[#ff1a1a]/20 rounded-full blur-3xl group-hover:blur-2xl group-hover:bg-[#ff1a1a]/30 transition-all"></div>
-
-                    <Play className="w-16 h-16 sm:w-20 sm:h-20 text-[#ff1a1a] relative z-10 group-hover:scale-110 transition-transform" />
-
-                  </div>
-
-                </div>
-
-                <div className="p-6 sm:p-8">
-
-                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white">{demo.title}</h3>
-
-                  <p className="text-base sm:text-lg text-[#d4b4b4]">{demo.subtitle}</p>
-
-                </div>
-
-              </motion.div>
-
-            ))}
-
-          </div>
-
-          <div className="text-center mt-12 sm:mt-16">
-
-            <Button
-
-              asChild
-
-              size="lg"
-
-              className="bg-gradient-to-r from-[#ff1a1a] to-[#cc0000] hover:from-[#ff3333] hover:to-[#e60000] text-white shadow-2xl shadow-[#8b0000]/50 text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 rounded-xl sm:rounded-2xl border-0"
-
-            >
-
-              <a href="#apply">Apply for a Free Strategy Call</a>
-
-            </Button>
-
-          </div>
-
-        </div>
-
-      </section>
-      */}
 
       {/* Application Form Section */}
 
@@ -1440,7 +1336,7 @@ function VakaloAIWebsite() {
 
               {
 
-                q: 'How is Vakalo AI different from other dubbing tools?',
+                q: 'How is Voxzen AI different from other dubbing tools?',
 
                 a: "We don't provide a generic tool. We build a custom AI pipeline specifically for you, trained on your content, voice, and style. It's a white-glove service, not a SaaS product."
 
@@ -1542,21 +1438,21 @@ function VakaloAIWebsite() {
                 </svg>
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-white via-[#f5e5e5] to-[#e8d4d4] bg-clip-text text-transparent tracking-tight">
-                Vakalo AI
+                Voxzen AI
               </h2>
             </div>
 
             {/* Contact Email */}
             <div className="flex flex-col items-center gap-3">
               <a 
-                href="mailto:contact@vakalo.advoot.com" 
+                href="mailto:contact@voxzen.ai" 
                 className="group flex items-center gap-3 px-6 py-3 bg-[#1a0f0f]/50 backdrop-blur-sm border border-[#8b0000]/30 rounded-xl hover:border-[#ff1a1a]/50 hover:bg-[#1a0f0f]/70 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#ff1a1a]/20 to-[#cc0000]/20 flex items-center justify-center group-hover:from-[#ff1a1a]/30 group-hover:to-[#cc0000]/30 transition-all duration-300">
                   <Mail className="w-5 h-5 text-[#ff1a1a] group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <span className="text-[#d4b4b4] group-hover:text-white text-base sm:text-lg font-medium transition-colors duration-300">
-                  contact@vakalo.advoot.com
+                  contact@voxzen.ai
                 </span>
               </a>
             </div>
@@ -1564,7 +1460,7 @@ function VakaloAIWebsite() {
             {/* Copyright */}
             <div className="pt-4 border-t border-[#8b0000]/20 w-full max-w-md">
               <p className="text-[#8b6b6b] text-sm sm:text-base text-center">
-                © 2025 Vakalo AI. All rights reserved.
+                © 2025 Voxzen AI. All rights reserved.
               </p>
             </div>
 
@@ -1606,5 +1502,6 @@ function VakaloAIWebsite() {
 
 }
 
-export default VakaloAIWebsite;
+export default VoxzenAIWebsite;
+
 

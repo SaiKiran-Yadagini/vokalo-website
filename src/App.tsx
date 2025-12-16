@@ -1,7 +1,7 @@
-import VakaloAIWebsite from './components/VakaloAIWebsite'
+import VoxzenAIWebsite from './components/VoxzenAIWebsite'
 
 function App() {
-  return <VakaloAIWebsite />
+  return <VoxzenAIWebsite />
 }
 
 export default App
