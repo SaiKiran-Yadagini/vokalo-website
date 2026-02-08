@@ -1,116 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  body {
-    overflow-x: hidden;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  }
-  
-  /* Scroll offset for anchor links */
-  section[id] {
-    scroll-margin-top: 100px;
-  }
-  
-  /* Better focus styles */
-  *:focus-visible {
-    outline: 2px solid rgba(255, 26, 26, 0.5);
-    outline-offset: 2px;
-  }
-  
-  /* Smooth transitions - Applied selectively, not globally for performance */
-  button, a, input, select, textarea {
-    transition-property: color, background-color, border-color, opacity, box-shadow, transform;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-  }
-  
-  /* Select dropdown styling */
-  select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-  
-  select::-ms-expand {
-    display: none;
-  }
-  
-  /* Select dropdown styling - Dark theme with red accents */
-  select {
-    background-color: #1a0f0f !important;
-    color: #ffffff !important;
-  }
-  
-  /* Select option styling - Dark theme */
-  select option {
-    background-color: #1a0f0f !important;
-    background: #1a0f0f !important;
-    color: #ffffff !important;
-    padding: 0.75rem 1rem;
-  }
-  
-  /* Placeholder option (empty value) */
-  select option[value=""] {
-    background-color: #1a0f0f !important;
-    background: #1a0f0f !important;
-    color: rgba(212, 180, 180, 0.4) !important;
-  }
-  
-  /* Selected/Checked option - Red theme instead of blue */
-  select option:checked,
-  select option[selected],
-  select option:focus {
-    background-color: #2a1515 !important;
-    background: #2a1515 !important;
-    color: #ff1a1a !important;
-    font-weight: 500;
-  }
-  
-  /* Hover state for options - Red accent */
-  select option:hover {
-    background-color: #2a1515 !important;
-    background: #2a1515 !important;
-    color: #ff1a1a !important;
-  }
-  
-  /* Select when open - ensure consistent styling */
-  select:focus {
-    outline: none;
-  }
-  
-  /* Override browser default blue highlight completely */
-  select:focus option:checked,
-  select:focus option[selected] {
-    background-color: #2a1515 !important;
-    background: #2a1515 !important;
-    color: #ff1a1a !important;
-  }
-  
-  /* Webkit browsers (Chrome, Safari, Edge) */
-  select option:checked {
-    background: #2a1515 !important;
-    background-color: #2a1515 !important;
-    color: #ff1a1a !important;
-  }
-  
-  /* Firefox */
-  select option:-moz-selected {
-    background-color: #2a1515 !important;
-    color: #ff1a1a !important;
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 100% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 100% 55%;
+
+    --radius: 0.75rem;
   }
 }
 
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    /* Lenis handles smooth scrolling */
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  /* Cinematic Grain Overlay */
+  .bg-grain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.4;
+  }
+
+  /* Custom Scrollbar - "Premium" feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0404;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff1a1a;
+  }
+}
+
+.glass-card {
+  background: rgba(40, 40, 40, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* More subtle */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 26, 26, 0.3);
+  box-shadow: 0 0 50px -12px rgba(255, 26, 26, 0.25);
+  transform: translateY(-4px);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(135deg, #ffffff 30%, #ff6b6b 100%);
+}
+
+.text-gradient-gold {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(135deg, #FFD700 0%, #FDB931 100%);
+}
+
+.hero-mesh {
+  background-color: #0a0404;
+  background-image:
+    radial-gradient(at 0% 0%, hsla(0, 100%, 50%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(0, 0%, 100%, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(0, 100%, 50%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(0, 0%, 20%, 0.1) 0px, transparent 50%);
+}
+
+/* Subtle grid background */
+.grid-bg {
+  background-size: 50px 50px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
