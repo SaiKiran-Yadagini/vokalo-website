@@ -1,0 +1,90 @@
+{
+    "name": "Voxzen AI - AI YouTube Channel Management",
+    "short_name": "Voxzen AI",
+    "description": "India's first AI-powered multilingual YouTube channel management service. Clone your voice, dub in Hindi, Telugu, Tamil & English.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#0a0404",
+    "theme_color": "#ff1a1a",
+    "orientation": "portrait-primary",
+    "lang": "en-IN",
+    "dir": "ltr",
+    "categories": [
+        "business",
+        "productivity",
+        "utilities"
+    ],
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/android-chrome-maskable-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/android-chrome-maskable-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/screenshot-wide.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Voxzen AI Homepage"
+        },
+        {
+            "src": "/screenshot-mobile.png",
+            "sizes": "640x1136",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Voxzen AI Mobile View"
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "shortcuts": [
+        {
+            "name": "Apply Now",
+            "short_name": "Apply",
+            "description": "Book a free strategy call with Voxzen AI",
+            "url": "/#apply",
+            "icons": [
+                {
+                    "src": "/shortcut-apply.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Watch Demos",
+            "short_name": "Demos",
+            "description": "See AI dubbing demos",
+            "url": "/#demos",
+            "icons": [
+                {
+                    "src": "/shortcut-demos.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        }
+    ]
+}

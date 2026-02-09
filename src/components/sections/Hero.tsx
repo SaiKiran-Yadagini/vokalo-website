@@ -44,12 +44,14 @@ export function Hero() {
                         <span className="text-xs sm:text-sm font-semibold tracking-wide text-gray-200 uppercase">INDIA'S FIRST AI YOUTUBE CHANNEL MANAGEMENT SERVICE</span>
                     </motion.div>
 
-                    {/* H1 Headline */}
+                    {/* H1 Headline - Primary SEO Target */}
                     <motion.h1
+                        id="hero-heading"
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, ease: "anticipate" }}
                         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter leading-[1.1] sm:leading-[1.1]"
+                        itemProp="headline"
                     >
                         <span className="block bg-gradient-to-b from-white via-white to-gray-400 bg-clip-text text-transparent pb-2">
                             You Make One Video.

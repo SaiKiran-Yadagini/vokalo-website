@@ -1,0 +1,68 @@
+# Voxzen AI - Robots.txt
+# https://voxzenai.in/robots.txt
+
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Allow Google bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+# Allow Bing bots
+User-agent: Bingbot
+Allow: /
+
+User-agent: MSNBot
+Allow: /
+
+# Allow other major search engines
+User-agent: Yandex
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Pinterest
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Disallow sensitive directories
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /src/
+Disallow: /.env
+Disallow: /dist/
+
+# Crawl-delay for politeness (optional)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://voxzenai.in/sitemap.xml
+
+# Host directive (for Yandex)
+Host: https://voxzenai.in
