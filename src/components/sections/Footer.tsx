@@ -168,16 +168,16 @@ export function Footer() {
                             © {currentYear} <span itemProp="copyrightHolder">Voxzen AI</span>. All rights reserved.
                         </p>
                         <nav aria-label="Legal links" className="flex gap-6">
-                            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                            <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+                            <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
+                            <a href="/terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms of Service</a>
+                            <a href="/cookie-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Cookie Policy</a>
                         </nav>
                     </div>
 
                     {/* Hidden SEO content */}
                     <meta itemProp="url" content="https://voxzenai.in" />
                     <meta itemProp="logo" content="https://voxzenai.in/logo.png" />
-                    <meta itemProp="foundingDate" content="2025" />
+                    <meta itemProp="foundingDate" content="2026" />
                 </div>
             </div>
         </div>

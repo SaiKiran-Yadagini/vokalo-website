@@ -1,20 +1,13 @@
 import { Suspense, lazy, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/sections/Navbar';
-import { Hero } from './components/sections/Hero';
+import { Home } from './pages/Home';
 import Lenis from 'lenis';
 
-// Lazy load heavy sections for better performance (Core Web Vitals)
-const TheProblem = lazy(() => import('./components/sections/TheProblem').then(module => ({ default: module.TheProblem })));
-const TheSolution = lazy(() => import('./components/sections/TheSolution').then(module => ({ default: module.TheSolution })));
-const Demos = lazy(() => import('./components/sections/Demos').then(module => ({ default: module.Demos })));
-const TheProcess = lazy(() => import('./components/sections/TheProcess').then(module => ({ default: module.TheProcess })));
-const ROICalculator = lazy(() => import('./components/sections/ROICalculator').then(module => ({ default: module.ROICalculator })));
-const LanguageMap = lazy(() => import('./components/sections/LanguageMap').then(module => ({ default: module.LanguageMap })));
-const SocialProof = lazy(() => import('./components/sections/SocialProof').then(module => ({ default: module.SocialProof })));
-const Pricing = lazy(() => import('./components/sections/Pricing').then(module => ({ default: module.Pricing })));
-const WhyVoxzen = lazy(() => import('./components/sections/WhyVoxzen').then(module => ({ default: module.WhyVoxzen })));
-const ApplicationForm = lazy(() => import('./components/sections/ApplicationForm').then(module => ({ default: module.ApplicationForm })));
-const FAQ = lazy(() => import('./components/sections/FAQ').then(module => ({ default: module.FAQ })));
+// Lazy load Legal Pages
+const PrivacyPolicy = lazy(() => import('./components/sections/PrivacyPolicy').then(module => ({ default: module.PrivacyPolicy })));
+const TermsOfService = lazy(() => import('./components/sections/TermsOfService').then(module => ({ default: module.TermsOfService })));
+const CookiePolicy = lazy(() => import('./components/sections/CookiePolicy').then(module => ({ default: module.CookiePolicy })));
 const Footer = lazy(() => import('./components/sections/Footer').then(module => ({ default: module.Footer })));
 
 // Loading Component with accessibility
@@ -31,17 +24,18 @@ function SectionLoader() {
   );
 }
 
-function App() {
+function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Smooth scrolling with Lenis
+    // Smooth scrolling with Lenis - Optimized for all devices including Mac
     const lenis = new Lenis({
-      duration: 1.5,
+      duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 1.2,
-      touchMultiplier: 2,
+      wheelMultiplier: 1.0,
+      touchMultiplier: 1.5,
     });
 
     function raf(time: number) {
@@ -75,125 +69,34 @@ function App() {
 
       {/* Main Content */}
       <main id="main-content" role="main" itemProp="mainContentOfPage">
-        {/* Hero Section - Above the fold, not lazy loaded */}
-        <Hero />
-
-        {/* Lazy-loaded sections for better Core Web Vitals */}
-        <Suspense fallback={<SectionLoader />}>
-          {/* Problem Section */}
-          <article
-            id="problem"
-            aria-labelledby="problem-heading"
-            itemScope
-            itemType="https://schema.org/Article"
-          >
-            <TheProblem />
-          </article>
-
-          {/* Solution/How It Works Section */}
-          <article
-            id="how-it-works"
-            aria-labelledby="solution-heading"
-            itemScope
-            itemType="https://schema.org/HowTo"
-          >
-            <TheSolution />
-          </article>
-
-          {/* Demos Section */}
-          <article
-            id="demos"
-            aria-labelledby="demos-heading"
-            itemScope
-            itemType="https://schema.org/VideoGallery"
-          >
-            <Demos />
-          </article>
-
-          {/* Process Section */}
-          <article
-            id="process"
-            aria-labelledby="process-heading"
-            itemScope
-            itemType="https://schema.org/HowTo"
-          >
-            <TheProcess />
-          </article>
-
-          {/* ROI Calculator */}
-          <aside
-            id="roi"
-            aria-labelledby="roi-heading"
-            itemScope
-            itemType="https://schema.org/WebApplication"
-          >
-            <ROICalculator />
-          </aside>
-
-          {/* Languages Section */}
-          <article
-            id="languages"
-            aria-labelledby="languages-heading"
-          >
-            <LanguageMap />
-          </article>
-
-          {/* Testimonials Section */}
-          <article
-            id="testimonials"
-            aria-labelledby="testimonials-heading"
-            itemScope
-            itemType="https://schema.org/Review"
-          >
-            <SocialProof />
-          </article>
-
-          {/* Pricing Section */}
-          <article
-            id="pricing"
-            aria-labelledby="pricing-heading"
-            itemScope
-            itemType="https://schema.org/OfferCatalog"
-          >
-            <Pricing />
-          </article>
-
-          {/* Why Voxzen Section */}
-          <article
-            id="why-us"
-            aria-labelledby="why-us-heading"
-          >
-            <WhyVoxzen />
-          </article>
-
-          {/* Application Form Section */}
-          <section
-            id="apply"
-            aria-labelledby="apply-heading"
-            itemScope
-            itemType="https://schema.org/ContactPage"
-          >
-            <ApplicationForm />
-          </section>
-
-          {/* FAQ Section */}
-          <article
-            id="faq"
-            aria-labelledby="faq-heading"
-            itemScope
-            itemType="https://schema.org/FAQPage"
-          >
-            <FAQ />
-          </article>
-
-          {/* Footer */}
-          <footer role="contentinfo" itemScope itemType="https://schema.org/WPFooter">
-            <Footer />
-          </footer>
-        </Suspense>
+        {children}
       </main>
+
+      <Suspense fallback={<SectionLoader />}>
+        {/* Footer */}
+        <footer role="contentinfo" itemScope itemType="https://schema.org/WPFooter">
+          <Footer />
+        </footer>
+      </Suspense>
     </div>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <Layout>
+        <Suspense fallback={<SectionLoader />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
+          </Routes>
+        </Suspense>
+      </Layout>
+    </Router>
+  );
+}
+
+export default App;

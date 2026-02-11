@@ -1,0 +1,48 @@
+# Voxzen AI
+> India's first AI-powered multilingual YouTube channel management service.
+
+## About
+Voxzen AI is a done-for-you AI dubbing and YouTube channel management service built specifically for Indian creators. We clone your voice using AI, dub your videos into multiple Indian languages, and fully manage your new language channels — including script adaptation, thumbnails, SEO, uploads, and community management.
+
+## Services
+- **AI Voice Cloning**: We create a digital replica of your unique voice that captures your tone, emotion, and speaking style.
+- **Script Adaptation**: Cultural and linguistic adaptation of scripts — not just translation, but localization for each target market.
+- **Video Dubbing**: AI-powered dubbing in Hindi, Telugu, Tamil, and English with natural prosody and timing.
+- **Complete Channel Management**: End-to-end YouTube channel management including uploads, SEO optimization, community posts, and growth strategy.
+- **Thumbnail Localization**: Localized thumbnails optimized for each target language market.
+- **Multilingual SEO**: Keyword research and SEO optimization for each language channel.
+
+## Supported Languages
+- Telugu ↔ Hindi (Available)
+- Hindi ↔ English (Available)
+- Telugu ↔ English (Available)
+- Tamil (Coming Soon)
+- Kannada (Coming Soon)
+- Malayalam (Coming Soon)
+
+## How It Works
+1. **Book a Free Strategy Call** — We analyze your channel and determine the best target languages.
+2. **Voice Cloning & Setup** — We create your custom voice clone and train our AI on your speaking style (2-3 weeks).
+3. **Channel Launch** — We set up your new language channels, create localized thumbnails, and publish first dubbed videos.
+4. **Ongoing Management** — New video dubbing within 24-48 hours, community management, SEO, and growth optimization.
+
+## Pricing
+Custom pricing based on channel size, upload frequency, and number of target languages. Monthly retainer plans start from ₹40,000 per month per language. Revenue partnership models with reduced upfront costs are also available.
+
+## Contact
+- Website: https://voxzenai.in
+- Email: contact@voxzen.ai
+- WhatsApp: Available on website
+
+## Company
+- **Legal Name**: VOXZEN AI PRIVATE LIMITED
+- **Registered Office**: Jaipur, Rajasthan, India
+- **CIN**: U62011RJ2026PTC110457
+- **Incorporated**: January 7, 2026
+
+## FAQ
+- **What does Voxzen AI do?** We take your existing YouTube channel and build fully managed channels in other Indian languages using AI voice cloning, custom script adaptation, and complete channel management.
+- **How is Voxzen AI different from HeyGen or ElevenLabs?** We are a done-for-you service, not a self-service tool. We manage your entire new language channel end-to-end.
+- **What languages does Voxzen AI support?** Telugu to Hindi, Hindi to English, Telugu to English, and Hindi to Telugu. Tamil, Kannada, Malayalam coming soon.
+- **Do I own the new YouTube channels?** Yes, 100%. All channels are on your Google account. You keep everything.
+- **How long does setup take?** 3-4 weeks for complete setup. After that, each new video is published within 24-48 hours.

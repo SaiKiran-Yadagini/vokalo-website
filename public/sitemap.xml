@@ -3,15 +3,19 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <!-- Homepage -->
   <url>
     <loc>https://voxzenai.in/</loc>
-    <lastmod>2025-02-09</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-in" href="https://voxzenai.in/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voxzenai.in/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voxzenai.in/" />
     <image:image>
       <image:loc>https://voxzenai.in/og-image.png</image:loc>
       <image:title>Voxzen AI - AI YouTube Channel Management</image:title>
@@ -22,7 +26,7 @@
   <!-- How It Works Section -->
   <url>
     <loc>https://voxzenai.in/#how-it-works</loc>
-    <lastmod>2025-02-09</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -30,7 +34,7 @@
   <!-- Demos Section -->
   <url>
     <loc>https://voxzenai.in/#demos</loc>
-    <lastmod>2025-02-09</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -38,7 +42,7 @@
   <!-- Languages Section -->
   <url>
     <loc>https://voxzenai.in/#languages</loc>
-    <lastmod>2025-02-09</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -46,7 +50,7 @@
   <!-- Pricing Section -->
   <url>
     <loc>https://voxzenai.in/#pricing</loc>
-    <lastmod>2025-02-09</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -54,7 +58,7 @@
   <!-- FAQ Section -->
   <url>
     <loc>https://voxzenai.in/#faq</loc>
-    <lastmod>2025-02-09</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -62,7 +66,7 @@
   <!-- Apply/Contact Section -->
   <url>
     <loc>https://voxzenai.in/#apply</loc>
-    <lastmod>2025-02-09</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -70,7 +74,7 @@
   <!-- Process Section -->
   <url>
     <loc>https://voxzenai.in/#process</loc>
-    <lastmod>2025-02-09</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -78,7 +82,7 @@
   <!-- ROI Calculator Section -->
   <url>
     <loc>https://voxzenai.in/#roi</loc>
-    <lastmod>2025-02-09</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -86,9 +90,33 @@
   <!-- Testimonials Section -->
   <url>
     <loc>https://voxzenai.in/#testimonials</loc>
-    <lastmod>2025-02-09</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://voxzenai.in/privacy-policy</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://voxzenai.in/terms-of-service</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Cookie Policy -->
+  <url>
+    <loc>https://voxzenai.in/cookie-policy</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
 </urlset>
